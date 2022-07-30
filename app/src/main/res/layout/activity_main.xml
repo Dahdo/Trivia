@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#141A33"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/title_text"
+            style="@style/MainTextStyle"
+            android:text="@string/title_text"
+            android:textColor="@color/light_gray_text_color"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_out_of"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/question_no"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.191"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="382dp"
+            android:layout_height="141dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#1B213A"
+            android:elevation="12dp"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.698"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_out_of">
+
+            <TextView
+                android:id="@+id/question_text_view"
+                style="@style/MainTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:padding="@dimen/question_text_padding"
+                android:textColor="@color/white" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/button_true"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:height="55dp"
+            android:backgroundTint="#6D101326"
+            android:text="@string/true_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view" />
+
+        <Button
+            android:id="@+id/button_false"
+            style="@style/ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:height="55dp"
+            android:text="@string/false_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_true" />
+
+        <Button
+            android:id="@+id/button_next"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:height="55dp"
+            android:text="@string/next_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.892"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_false" />
+
+        <TextView
+            android:id="@+id/score_text"
+            style="@style/MainTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toEndOf="@+id/text_view_out_of"
+            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+        <TextView
+            android:id="@+id/highest_score"
+            style="@style/MainTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/card_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.551"
+            app:layout_constraintStart_toEndOf="@+id/text_view_out_of" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
